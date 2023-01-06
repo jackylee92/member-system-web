@@ -78,7 +78,7 @@ export const constantRoutes = [
     ]
   },
   {
-    path: '/permission',
+    path: '/order_voucher',
     component: Layout,
     redirect: '/permission/page',
     alwaysShow: true, // will always show the root menu
