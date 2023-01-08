@@ -72,7 +72,7 @@ export const constantRoutes = [
       {
         path: 'dashboard',
         component: () => import('@/views/dashboard/index'),
-        name: 'Dashboard',
+        name: 'dashboard',
         meta: { title: '首页', icon: 'dashboard', affix: true }
       }
     ]
@@ -86,18 +86,18 @@ export const constantRoutes = [
     meta: {
       title: '订单凭证',
       icon: 'lock',
-      roles: ['admin', 'editor'] // you can set roles in root nav
+      roles: ['admin', 'default'] // you can set roles in root nav
     },
     children: [
       {
         path: 'page',
-        component: () => import('@/views/permission/page'),
+        component: () => import('@/views/table/complex-table'),
         name: 'PagePermission',
         meta: { title: '美团' }
       },
       {
         path: 'directive',
-        component: () => import('@/views/permission/directive'),
+        component: () => import('@/views/table/drag-table'),
         name: 'DirectivePermission',
         meta: { title: '饿了么' }
       }
